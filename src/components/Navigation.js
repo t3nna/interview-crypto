@@ -93,32 +93,27 @@ function Navigation(props) {
                              ref={openNavRef}>
                             <ul aria-label="Primary" className="nav-list">
                                 <li className="nav-list__info">Categories</li>
-                                <li><NavLink to={'/categories/desk'}
+                                <li><NavLink to={'wallet'}
                                              className={({isActive}) => {
                                                  return isActive ? "nav-list__active" : undefined
                                              }}
                                              onClick={() => setNavOpen(false)}
-                                >getUsers</NavLink></li>
+                                >my Wallet</NavLink></li>
                                 <li><NavLink
-                                    to={'categories/backpack'}
+                                    to={'coins/bitcoin'}
                                     className={({isActive}) => {
                                         return isActive ? "nav-list__active" : undefined
                                     }}
                                     onClick={() => setNavOpen(false)}
-                                >getFirstUser</NavLink></li>
-                                <li className={'mobile-info'}>
-                                    <NavLink to={'categories/hobby'}
-                                             className={({isActive}) => {
-                                                 return isActive ? "nav-list__active" : undefined
-                                             }}
-                                             onClick={() => setNavOpen(false)}
-                                    >
+                                >Bitcoin</NavLink></li>
+                                <li>
+                                    <a href={'https://www.linkedin.com/in/t3nna/'}>
                                         About
-                                    </NavLink>
+                                    </a>
                                 </li>
 
                                 <li className={'mobile-info'}>
-                                    <a href={'https://github.com/t3nna'}>
+                                    <a href={'https://github.com/t3nna/interview-crypto'}>
                                         Source
                                     </a>
                                 </li>

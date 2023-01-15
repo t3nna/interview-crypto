@@ -9,20 +9,25 @@ function CoinInfo(props) {
     const {isLoading, data, isError, error, isFetching, refetch} =
         useCoinInfo(id)
 
-    if (isLoading ) {
+    if (isLoading) {
         return <h2>Loading...</h2>
     }
 
-    if (isError){
+    if (isError) {
         return <h2>{error.message}</h2>
     }
     const info = data.data
+    console.log(info)
     return (
-        <>
-        <h1>{info.name}</h1>
+        <div className={'flow'}>
+            <div className={'coin-page__header'}>
+
+            <h1 className={'fs-secondary-heading'}>{info.name}</h1>
             <img src={info.image.small} alt={info.id}/>
+            </div>
+
             <p dangerouslySetInnerHTML={{__html: info.description.en}}></p>
-        </>
+        </div>
     );
 }
 

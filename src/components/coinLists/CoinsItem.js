@@ -18,7 +18,7 @@ function CoinsItem({coin}) {
                 <div className="coin-info__name">
                     <Link to={`/coins/${coin.id}`}>
                         <img src={coin.image} alt={coin.name}/>
-                        <h3>{coin.name}</h3>
+                        <h3 className={'fs-500'}>{coin.name}</h3>
 
                     </Link>
                 </div>

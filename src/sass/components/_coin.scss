@@ -19,7 +19,7 @@
   grid-auto-columns: 1fr;
   align-items: center;
   justify-items: center;
-  padding-block: 0.5rem;
+  padding-block: 0.75rem;
   text-decoration: none;
   color: black;
 }
@@ -32,19 +32,26 @@
 }
 
 
-.coin-info__name {
+.coin-info__name{
   justify-self: start;
 
   display: flex;
   align-items: center;
   gap: 1rem;
 
+  a{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    color: inherit;
+  }
+
   img{
     width: 2rem;
   }
 }
 
-.coin-info__market-gap {
+.coin-info__save {
   justify-self: end;
 }
 
@@ -54,4 +61,11 @@
 }
 .price-down{
   color: red;
+}
+
+// coin Page
+.coin-page__header{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }

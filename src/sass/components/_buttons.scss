@@ -33,7 +33,7 @@
 }
 
 .theme-active{
-  background-color: wheat;
+  background-color: variables.$clr-primary-400;
 }
 
 .moon-icon, .sun-icon {
@@ -41,4 +41,18 @@
   vertical-align: center;
   //border-radius: 10rem;
   //padding: .25rem;
+}
+
+//main button
+
+.btn{
+  border: none;
+  padding: .5em 2em;
+  border-radius: 10rem;
+  background-color: variables.$clr-primary-600;
+  color: variables.$clr-font-primary-dark;
+  &:hover, &:focus{
+    background-color: variables.$clr-primary-700;
+
+  }
 }

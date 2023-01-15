@@ -20,9 +20,9 @@ function Footer(props) {
                             <p>Framework for Css</p>
                         </a></li>
                         <li><a href="https://redux.js.org//">
-                            <img src="/images/redux-logo.png" alt=""/>
-                            <h3 className="fs-third-heading__neutral">Redux</h3>
-                            <p>A Predictable State Container </p>
+                            <img src="/images/react-query.png" alt="react-query"/>
+                            <h3 className="fs-third-heading__neutral">React Query</h3>
+                            <p>Performant and powerful data synchronization for React</p>
                         </a></li>
                     </ul>
                     <div className="copyright fw-medium fs-500">
