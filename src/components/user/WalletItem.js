@@ -26,7 +26,8 @@ function WalletItem({coin}) {
 
                     </Link>
                 </div>
-                <span>{currencyFormat(coin.current_price)}</span>
+                {/*<span>{currencyFormat(coin.current_price)}</span>*/}
+                <span>{coin.current_price}</span>
                 <span className={coin.price_change_percentage_24h > 0 ? 'price-up' : 'price-down'}>
                     {coin.price_change_percentage_24h}
                 </span>

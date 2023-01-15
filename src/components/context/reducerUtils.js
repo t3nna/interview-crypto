@@ -63,7 +63,10 @@ function removeCoin(state, item){
 console.log(res)*/
 
 function addCoin (state,item){
-    let inArray = state.find(coin => coin.id ===item.id)
+    if (!state){
+        return [item]
+    }
+    let inArray =  state.find(coin => coin.id ===item.id)
     if(!inArray && state.length<5){
         console.log(state.length)
         return [...state, item]
