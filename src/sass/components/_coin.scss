@@ -1,0 +1,57 @@
+.trending-section, .market-section{
+  a{
+    text-decoration: none;
+  }
+}
+
+
+.trending-cons-list {
+  display: grid;
+}
+
+.trending-cons-list > * + * {
+  border-top: 1px solid black;
+}
+
+.coin-info {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  padding-block: 0.5rem;
+  text-decoration: none;
+  color: black;
+}
+
+.trending-section{
+  .coin-info{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+
+.coin-info__name {
+  justify-self: start;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  img{
+    width: 2rem;
+  }
+}
+
+.coin-info__market-gap {
+  justify-self: end;
+}
+
+// prices
+.price-up{
+  color: green;
+}
+.price-down{
+  color: red;
+}
