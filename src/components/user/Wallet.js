@@ -16,7 +16,7 @@ function Wallet(props) {
                 <div className="container">
                     <ul className="wallet-list">
                         {
-                            wallet ? wallet.map(coin =>{
+                            wallet.length ? wallet.map(coin =>{
                                 return (
                                     <WalletItem coin={coin} key={coin.id}/>
                                 )
