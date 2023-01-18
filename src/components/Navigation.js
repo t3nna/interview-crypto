@@ -10,7 +10,7 @@ function Navigation(props) {
 
     const outsideHandler = useCallback(() => {
         setNavOpen(false)
-    }, [navOpen])
+    }, [])
 
 
     useOutsideClick([buttonRef, openNavRef], outsideHandler)

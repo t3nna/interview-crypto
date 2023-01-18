@@ -1,6 +1,5 @@
 import React from 'react';
 import {useParams} from "react-router-dom";
-import {useTrendingList} from "../../hooks/useTrendingList";
 import {useHistoryData} from "../../hooks/useHistoryData";
 
 import {
@@ -31,7 +30,7 @@ ChartJS.register(
 function CoinChart(props) {
     const {id} = useParams()
 
-    const {isLoading, data, isError, error, isFetching, refetch} =
+    const {isLoading, data, isError, error} =
         useHistoryData(id)
 
     if (isLoading ) {

@@ -1,10 +1,16 @@
-import React, {useContext, useReducer} from 'react';
+import React, {useContext} from 'react';
 import {currencyFormat} from "../../utils/currencyFormat";
 import {Link} from "react-router-dom";
 import {UserContext} from "../context/UserContext";
 
 function CoinsItem({coin}) {
     const {wallet, addCoin} = useContext(UserContext)
+    let isDisabled
+    if(wallet) {
+        isDisabled = wallet.some(item => item.id === coin.id)
+    }
+    // const inWallet = wallet.find(c => c.id === coin.id)
+
 
     function handleClick() {
         addCoin(coin)
@@ -27,7 +33,9 @@ function CoinsItem({coin}) {
                     {coin.price_change_percentage_24h}
                 </span>
                 <div className="coin-info__save">
-                    <button className="btn" onClick={handleClick}>Add</button>
+                    <button className="btn" onClick={handleClick} disabled={isDisabled}>
+                        {isDisabled ? 'Added' : 'Add'}
+                    </button>
                 </div>
 
             </div>

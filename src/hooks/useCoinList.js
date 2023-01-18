@@ -8,6 +8,7 @@ const fetchCoinList = () =>{
 
 export const useCoinList = (onSuccess, onError) =>{
     return useQuery('coins', fetchCoinList, {
-        onSuccess: onSuccess
+        onSuccess: onSuccess,
+        // refetchInterval: 2000
     })
  }

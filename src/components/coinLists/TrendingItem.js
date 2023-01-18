@@ -4,6 +4,10 @@ import {UserContext} from "../context/UserContext";
 
 function TrendingItem({coin}) {
     const {wallet, addCoin} = useContext(UserContext)
+    let isDisabled
+    if(wallet) {
+        isDisabled = wallet.some(item => item.id === coin.id)
+    }
 
     function handleClick() {
         addCoin(coin)
@@ -22,7 +26,9 @@ function TrendingItem({coin}) {
                     </Link>
                 </div>
                 <div className="coin-info__save">
-                    <button className="btn" onClick={handleClick}>Add</button>
+                    <button className="btn" onClick={handleClick} disabled={isDisabled}>
+                        {isDisabled ? 'Added' : 'Add'}
+                    </button>
                 </div>
             </div>
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import {useCoinList} from "../../hooks/useCoinList";
 import {useTrendingList} from "../../hooks/useTrendingList";
 import TrendingItem from "./TrendingItem";
 
@@ -7,7 +6,7 @@ function Trending(props) {
     const onSuccess = (data) =>{
         console.log(data.data)
     }
-    const {isLoading, data, isError, error, isFetching, refetch} =
+    const {isLoading, data, isError, error} =
         useTrendingList(onSuccess)
 
     if (isLoading ) {

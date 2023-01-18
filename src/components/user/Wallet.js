@@ -1,12 +1,16 @@
 import React, {useContext} from 'react';
-import {Link} from "react-router-dom";
-import userContext, {UserContext} from "../context/UserContext";
-import CoinsItem from "../coinLists/CoinsItem";
+import  {UserContext} from "../context/UserContext";
 import WalletItem from "./WalletItem";
 
 function Wallet(props) {
     const {wallet} = useContext(UserContext)
     console.log(wallet)
+    let condition1, condition2
+    condition1 = Boolean(wallet)
+    if (condition1) {
+    condition2 = wallet.length > 0
+
+    }
 
 
     return (
@@ -16,7 +20,7 @@ function Wallet(props) {
                 <div className="container">
                     <ul className="wallet-list">
                         {
-                            wallet.length ? wallet.map(coin =>{
+                            (condition1 && condition2) ? wallet.map(coin =>{
                                 return (
                                     <WalletItem coin={coin} key={coin.id}/>
                                 )

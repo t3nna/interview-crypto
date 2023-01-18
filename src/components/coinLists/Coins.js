@@ -6,7 +6,7 @@ function Coins(props) {
     const onSuccess = (data) =>{
         console.log(data.data)
     }
-    const {isLoading, data, isError, error, isFetching, refetch} =
+    const {isLoading, data, isError, error} =
         useCoinList(onSuccess)
 
     if (isLoading ) {

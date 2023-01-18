@@ -1,7 +1,6 @@
 @import "abstracts/variables";
 
 @import "base/reset",
-"base/root",
 "base/typo",
 "base/base",
 "base/theme"
@@ -16,7 +15,5 @@
 @import "layout/main-part";
 @import "layout/footer";
 @import "layout/item";
-
-@import "pages/home";
 
 @import "./utilities";

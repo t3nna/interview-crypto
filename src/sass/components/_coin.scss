@@ -1,3 +1,6 @@
+@use '../base/typo';
+@use '../abstracts/variables';
+
 .trending-section, .market-section{
   a{
     text-decoration: none;
@@ -53,6 +56,10 @@
 
 .coin-info__save {
   justify-self: end;
+
+  button:disabled{
+    background-color: variables.$clr-primary-700;
+  }
 }
 
 // prices
